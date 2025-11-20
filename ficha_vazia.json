@@ -1,0 +1,382 @@
+{
+  "personalInfo": {
+    "name": "",
+    "player": "",
+    "ocupation": "",
+    "age": "",
+    "sex": "",
+    "address": "",
+    "nasc": ""
+  },
+  "expertises": [
+    {
+      "expertise": "Antropologia (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "Armas de Fogo (Pistolas) (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "Armas de Fogo (Rifles) (25%)",
+      "value": "25",
+      "cheked": false
+    },
+    {
+      "expertise": "Arqueologia (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "Arremessar (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "Arte/Ofício (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "Avaliar (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "Cavalgar (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "Charme (15%)",
+      "value": "15",
+      "cheked": false
+    },
+    {
+      "expertise": "Chaveiro (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "Ciência (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "Contabilidade (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "Direito (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "Dirigir Automóvel (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "Disfarce (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "Encontrar (25%)",
+      "value": "25",
+      "cheked": false
+    },
+    {
+      "expertise": "Escalar (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "Escutar (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "Esquivar (DEX ÷ 2)",
+      "value": "2",
+      "cheked": false
+    },
+    {
+      "expertise": "Furtividade (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "História (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "Intimidação (15%)",
+      "value": "15",
+      "cheked": false
+    },
+    {
+      "expertise": "Língua Nativa (EDU)",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "Língua (Outros) (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "Lutar (Brigar) (25%)",
+      "value": "25",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "Lábia (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "Medicina (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "Mecânica (10%)",
+      "value": "10",
+      "cheked": false
+    },
+    {
+      "expertise": "Mitos de Cthulhu (00%)",
+      "value": "00",
+      "cheked": false
+    },
+    {
+      "expertise": "Mundo Natural (10%)",
+      "value": "10",
+      "cheked": false
+    },
+    {
+      "expertise": "Natação (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "Navegar (10%)",
+      "value": "10",
+      "cheked": false
+    },
+    {
+      "expertise": "Nível de Crédito (00%)",
+      "value": "00",
+      "cheked": false
+    },
+    {
+      "expertise": "Ocultismo (05%)",
+      "value": "05",
+      "cheked": false
+    },
+    {
+      "expertise": "Operar Maquinaria (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "Persuasão (10%)",
+      "value": "10",
+      "cheked": false
+    },
+    {
+      "expertise": "Pilotar (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "Prestidigitação (10%)",
+      "value": "10",
+      "cheked": false
+    },
+    {
+      "expertise": "Primeiros Socorros (30%)",
+      "value": "30",
+      "cheked": false
+    },
+    {
+      "expertise": "Psicanálise (01%)",
+      "value": "01",
+      "cheked": false
+    },
+    {
+      "expertise": "Psicologia (10%)",
+      "value": "10",
+      "cheked": false
+    },
+    {
+      "expertise": "Pular (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "Rastrear (10%)",
+      "value": "10",
+      "cheked": false
+    },
+    {
+      "expertise": "Sobrevivência (10%)",
+      "value": "10",
+      "cheked": false
+    },
+    {
+      "expertise": "Usar Biblioteca (20%)",
+      "value": "20",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "30",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "expertise": "",
+      "value": "",
+      "cheked": false
+    },
+    {
+      "lucky": "Sorte",
+      "value": "0"
+    }
+  ],
+  "situation": {
+    "dieding": false,
+    "tempInsanity": false,
+    "permentInsanity": false,
+    "seriousInj": false,
+    "maxLife": "0",
+    "currentLife": "0",
+    "maxSanity": "0",
+    "currentSanity": "0",
+    "maxMage": "0",
+    "currentMage": "0"
+  },
+  "attributes": [
+    {
+      "name": "FOR",
+      "value": "0"
+    },
+    {
+      "name": "DES",
+      "value": "0"
+    },
+    {
+      "name": "POD",
+      "value": "0"
+    },
+    {
+      "name": "CON",
+      "value": "0"
+    },
+    {
+      "name": "APA",
+      "value": "0"
+    },
+    {
+      "name": "EDU",
+      "value": "0"
+    },
+    {
+      "name": "TAM",
+      "value": "0"
+    },
+    {
+      "name": "INT",
+      "value": "0"
+    },
+    {
+      "name": "MOV",
+      "value": "0"
+    }
+  ]
+}

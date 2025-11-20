@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+      integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Ficha Call of Cthulhu</title>
+  </head>
+
+  <body>
+    <section class="card" id="card">
+      <section class="personal-info">
+        <ol>
+          <div id="name">
+            <h3>Nome:</h3>
+            <h4 contenteditable="true" spellcheck="false"></h4>
+          </div>
+          <div id="player">
+            <h3>Jogador:</h3>
+            <h4 contenteditable="true" spellcheck="false"></h4>
+          </div>
+          <div id="ocupation">
+            <h3>Ocupação:</h3>
+            <h4 contenteditable="true" spellcheck="false"></h4>
+          </div>
+          <div>
+            <div id="age">
+              <h3>Idade:</h3>
+              <h4 contenteditable="true" spellcheck="false"></h4>
+            </div>
+            <div id="sex">
+              <h3>Sexo:</h3>
+              <h4 contenteditable="true" spellcheck="false"></h4>
+            </div>
+          </div>
+          <div id="address">
+            <h3>Residência:</h3>
+            <h4 contenteditable="true" spellcheck="false"></h4>
+          </div>
+          <div id="nasc">
+            <h3>Nascimento:</h3>
+            <h4 contenteditable="true" spellcheck="false"></h4>
+          </div>
+        </ol>
+      </section>
+      <section class="attributes">
+        <h2>CARACTERISTICAS</h2>
+        <div>
+          <section id="for">
+            <h3>FOR</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+          <section id="des">
+            <h3>DES</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+          <section id="pod">
+            <h3>POD</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+          <section id="con">
+            <h3>CON</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+          <section id="apa">
+            <h3>APA</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+          <section id="edu">
+            <h3>EDU</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+          <section id="tam">
+            <h3>TAM</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+          <section id="int">
+            <h3>INT</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+          <section id="mov">
+            <h3>MOV</h3>
+            <div>
+              <h4 class="max" contenteditable="true" data-limit="2">0</h4>
+              <h4 class="med">0</h4>
+              <h4 class="min">0</h4>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="situation">
+        <div class="check">
+          <div class="boxes lucky">
+            <h2>Sorte</h2>
+            <p class="box" contenteditable="true">0</p>
+          </div>
+          <section>
+            <div id="tempInsanity" class="boxes">
+              <h2>IT</h2>
+              <div class="box"></div>
+            </div>
+            <div id="permInsanity" class="boxes">
+              <h2>IP</h2>
+              <div class="box"></div>
+            </div>
+            <div id="seriousInj" class="boxes">
+              <h2>LG</h2>
+              <div class="box"></div>
+            </div>
+            <div id="dieding" class="boxes">
+              <h2>Mor</h2>
+              <div class="box"></div>
+            </div>
+          </section>
+        </div>
+
+        <div class="point" id="life">
+          <h2>Pontos de vida</h2>
+          <div class="point-max">
+            <div class="life-point"></div>
+            <div class="value">
+              <p class="current">0</p>
+              <p>/</p>
+              <p class="max">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="point" id="sanity">
+          <h2>Pontos de sanidade</h2>
+          <div class="point-max">
+            <div class="sanity-point"></div>
+            <div class="value">
+              <p class="current">0</p>
+              <p>/</p>
+              <p class="max">0</p>
+            </div>
+          </div>
+        </div>
+        <div class="point" id="mage">
+          <h2>Pontos de magia</h2>
+          <div class="point-max">
+            <div class="mage-point"></div>
+            <div class="value">
+              <p class="current">0</p>
+              <p>/</p>
+              <p class="max">0</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="expertises">
+        <!-- PERÍCIAS — mesma ordem da imagem, classes intactas -->
+      </section>
+    </section>
+    <section class="footer">
+      <button class="download">Baixar Ficha</button>
+      <button class="upload">Importar Ficha</button>
+    </section>
+    <script src="script.js"></script>
+    <script src="actions.js"></script>
+  </body>
+</html>

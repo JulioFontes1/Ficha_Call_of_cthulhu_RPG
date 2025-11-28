@@ -163,6 +163,8 @@
               <p>/</p>
               <p class="max">0</p>
             </div>
+            <button class="add" id="add-life">+</button>
+            <button class="rem" id="rem-life">-</button>
           </div>
         </div>
         <div class="point" id="sanity">
@@ -174,6 +176,8 @@
               <p>/</p>
               <p class="max">0</p>
             </div>
+            <button class="add" id="add-sanity">+</button>
+            <button class="rem" id="rem-sanity">-</button>
           </div>
         </div>
         <div class="point" id="mage">
@@ -185,12 +189,30 @@
               <p>/</p>
               <p class="max">0</p>
             </div>
+            <button class="add" id="add-mage">+</button>
+            <button class="rem" id="rem-mage">-</button>
           </div>
         </div>
       </section>
-      <section class="expertises">
-        <!-- PERÍCIAS — mesma ordem da imagem, classes intactas -->
-      </section>
+      <div class="expertises-container">
+        <section class="board">
+          <div class="searsh">
+            <h4>Pesquisar Perícia</h4>
+            <p class="searsh-input" contenteditable="true"></p>
+          </div>
+          <div class="sections">
+            <button id="all">
+              <i class="fa fa-home" aria-hidden="true"></i>
+            </button>
+            <button id="favorites">
+              <i class="fa fa-star" aria-hidden="true"></i>
+            </button>
+          </div>
+        </section>
+
+        <section class="expertises"></section>
+        <section class="favorite-expertises"></section>
+      </div>
     </section>
     <section class="footer">
       <button class="download">Baixar Ficha</button>

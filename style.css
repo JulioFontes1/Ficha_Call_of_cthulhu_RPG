@@ -1,120 +1,116 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    background-color: #222;
-    color: #fff;
+  background-color: #222;
+  color: #fff;
 }
 
 .card {
-    border: 2px solid #fff;
-    width: 780px;
-    height: 800px;
-    padding: 6px;
+  border: 2px solid #fff;
+  width: 780px;
+  height: 800px;
+  padding: 6px;
 
-    display: grid;
-    grid-template-columns: 50% 50%;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 
 .personal-info,
 .attributes {
-    height: 220px;
-    border: 2px solid #fff;
-
+  height: 220px;
+  border: 2px solid #fff;
 }
 
 .personal-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
 }
 
 .character-img {
-    border: 2px solid #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    height: 76px;
-    width: 76px;
+  height: 76px;
+  width: 76px;
 }
 
 .personal-info div {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
 
-    gap: 10px 12px;
-
+  gap: 10px 12px;
 }
 
 .personal-info div h4 {
-    border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 
 .attributes {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.attributes>div {
-    display: grid;
-    grid-template-columns: 96px 96px 96px;
-    justify-content: center;
-    gap: 16px;
-
+.attributes > div {
+  display: grid;
+  grid-template-columns: 96px 96px 96px;
+  justify-content: center;
+  gap: 16px;
 }
 
-.attributes>h2 {
-    border-bottom: solid 1px #fff;
-    text-align: center;
-    width: 100%;
-    height: 30px;
+.attributes > h2 {
+  border-bottom: solid 1px #fff;
+  text-align: center;
+  width: 100%;
+  height: 30px;
 }
 
-.attributes>div>section {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.attributes > div > section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
-    align-items: center;
-    height: 48px;
-    gap: 12px;
-
+  align-items: center;
+  height: 48px;
+  gap: 12px;
 }
 
-.attributes>div>section>h3 {
-    width: 32px;
-    height: 48px;
-    line-height: 48px;
+.attributes > div > section > h3 {
+  width: 32px;
+  height: 48px;
+  line-height: 48px;
 }
 
-.attributes section>div {
-    display: grid;
-    grid-template-columns: 20px 20px 20px;
-    grid-column: 2 / 4;
+.attributes section > div {
+  display: grid;
+  grid-template-columns: 20px 20px 20px;
+  grid-column: 2 / 4;
 
-    width: 64px;
-    height: 48px;
+  width: 64px;
+  height: 48px;
 }
 
 .attributes section div .max {
-    border: solid 1px #fff;
-    grid-row: 1 / 3;
-    grid-column: 1 / 3;
-    width: 36px;
-    height: 48px;
-    line-height: 48px;
-    text-align: center;
+  border: solid 1px #fff;
+  grid-row: 1 / 3;
+  grid-column: 1 / 3;
+  width: 36px;
+  height: 48px;
+  line-height: 48px;
+  text-align: center;
 }
 
 /* #mov{
@@ -125,207 +121,408 @@ body {
     text-align: center;
 } */
 
-
 .attributes section div .med,
 .attributes section div .min {
-    border: solid 1px #fff;
+  border: solid 1px #fff;
 
-    font-size: 12px;
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
-    text-align: center;
+  font-size: 12px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
 }
 
 .situation {
-    border: 1px solid #fff;
-    height: 550px;
-    width: 100%;
+  border: 1px solid #fff;
+  height: 550px;
+  width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .situation h2 {
-    font-size: 18px;
-    margin: 12px 0;
+  font-size: 18px;
+  margin: 12px 0;
 }
 
 .situation .point-max {
-    background-color: #ccc;
-    width: 300px;
-    height: 35px;
-    position: relative;
+  background-color: #ccc;
+  width: 300px;
+  height: 35px;
+  position: relative;
 }
 
 .situation .life-point {
-    position: absolute;
-    background-color: #b30000;
-    width: 50%;
-    height: 35px;
+  position: absolute;
+  background-color: #b30000;
+  width: 50%;
+  height: 35px;
 }
 
 .situation .sanity-point {
-    position: absolute;
-    background-color: #000dc2;
-    width: 50%;
-    height: 35px;
+  position: absolute;
+  background-color: #000dc2;
+  width: 50%;
+  height: 35px;
 }
 
 .situation .mage-point {
-    position: absolute;
-    background-color: #3100a3;
-    width: 50%;
-    height: 35px;
+  position: absolute;
+  background-color: #3100a3;
+  width: 50%;
+  height: 35px;
 }
 
 .situation .point-max .value {
-    position: absolute;
-    width: 40px;
-    display: flex;
-    justify-self: center;
+  position: absolute;
+  width: 40px;
+  display: flex;
+  justify-self: center;
 }
 
 .situation .point-max .value p {
-    color: #000000;
-    height: 100%;
-    width: 35px;
-    line-height: 35px;
-    padding-left: 4px;
+  color: #fff;
+  height: 100%;
+  width: 35px;
+  line-height: 35px;
+  padding-left: 4px;
+}
+
+.point {
+  position: relative;
+}
+
+.point button.add {
+  position: absolute;
+  right: 10px;
+  top: 24%;
+
+  width: 22px;
+  height: 22px;
+  font-size: 20px;
+  line-height: 22px;
+  background-color: #fff;
+  border: solid 1px #b30000;
+}
+
+.point button.rem {
+  position: absolute;
+  left: 10px;
+  top: 24%;
+
+  width: 22px;
+  height: 22px;
+  font-size: 20px;
+  line-height: 22px;
+  background-color: #fff;
+  border: solid 1px #fff;
 }
 
 .situation .check {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-content: space-around;
-    margin: 10px 8px;
-    gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  margin: 10px 8px;
+  gap: 15px;
 }
 
-
 .situation .check section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 32px;
 }
 
 .boxes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 
 .box {
-    border: solid 2px #fff;
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
+  border: solid 2px #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
 }
 
 .box i {
-    display: none;
-    font-size: 32px;
-    line-height: 38px;
-    text-align: center;
+  display: none;
+  font-size: 32px;
+  line-height: 38px;
+  text-align: center;
 }
 
 .lucky {
-    align-self: center;
-    font-weight: 700;
-    font-size: 28px;
+  align-self: center;
+  font-weight: 700;
+  font-size: 28px;
 }
 
+.expertises-container {
+  height: 550px;
+  width: 100%;
+  border: 1px solid #fff;
+}
+
+.expertises-container .searsh {
+  border: solid 1px #fff;
+  width: 100%;
+  margin: 6px 0;
+  padding: 4px;
+  font-size: 14px;
+  outline: none;
+  height: 40px;
+}
+
+.expertises-container .searsh .searsh-input {
+  outline: none;
+  min-height: 20px;
+}
 
 .expertises {
-    border: 1px solid #fff;
-    height: 550px;
-    width: 100%;
+  height: 510px;
+  width: 100%;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    overflow: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-x: auto;
+  position: relative;
 }
 
-.checked{
-    background-color: #fff;
+.favorite-expertises {
+  height: 550px;
+  width: 100%;
+
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  overflow: auto;
+  position: relative;
+}
+
+.checked {
+  background-color: #fff;
 }
 
 .expertise_check-box {
-    border: solid 1px #fff;
-    width: 10px;
-    height: 10px;
-    font-size: 8px;
-    line-height: 8px;
-    text-align: center;
-    cursor: pointer;
+  border: solid 1px #fff;
+  width: 10px;
+  height: 10px;
+  font-size: 8px;
+  line-height: 8px;
+  text-align: center;
+  cursor: pointer;
 }
 
-.expertises .check{
-    background-color: #fff;
+.expertises .check {
+  background-color: #fff;
 }
 
-.expertise{
-    display: grid;
-    grid-template-columns: 20px 1fr auto;;
-    align-items: center;
-    justify-content: space-between;
-    height: 35px;
-    border: solid 1px #fff;
-    min-width: 180px;
+.expertise {
+  display: grid;
+  grid-template-columns: 20px 1fr auto;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  border: solid 1px #fff;
+  min-width: 180px;
 
-    overflow: hidden;
+  overflow: hidden;
+  padding: 0 4px;
+  position: relative;
 }
 
+.fa-star-o {
+  position: absolute;
+  right: 40px;
+}
 
-.expertise p{
-    font-size: 12px;
-    min-width: 102px;
+.expertise .favorite {
+  color: gold;
+}
+
+.board {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.sections {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 60px;
+}
+
+.sections button {
+  width: 22px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 22px;
+  background-color: transparent;
+  color: #fff;
+  border: solid 1px #fff;
+  padding: 4px;
+  width: 40px;
+}
+
+.expertise p {
+  font-size: 12px;
+  min-width: 102px;
 }
 
 .value {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: 12px;
 
-    height: 34px;
-    min-width: 34px;
-    text-align: center;
+  height: 34px;
+  min-width: 34px;
+  text-align: center;
 }
 
-section>.value .max{
-    grid-row: 1 / 3;
-    height: 34px;
-    line-height: 34px;
-    border: solid 1px #fff;
+section > .value .max {
+  grid-row: 1 / 3;
+  height: 34px;
+  line-height: 34px;
+  border: solid 1px #fff;
 }
 
-.value .med, .value .min {
-    border: solid 1px #fff;
-    height: 17px;
+.value .med,
+.value .min {
+  border: solid 1px #fff;
+  height: 17px;
 }
 
-.footer{
-    margin-top: 12px;
+.footer {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-around;
+  width: 780px;
+  height: 60px;
+  align-items: center;
+  border: solid 2px #fff;
+  background-color: #2b2b2b;
+}
+
+.footer button,
+.footer input[type="file"] {
+  padding: 8px 16px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  background-color: #1b1b1b;
+  color: #acacac;
+  border: solid 2px #acacac;
+  cursor: pointer;
+  width: 240px;
+}
+
+@media (max-width: 770px) {
+  .card {
     display: flex;
-    justify-content: space-around;
-    width: 780px;
-    height: 60px;
+    flex-direction: column;
     align-items: center;
-    border: solid 2px #fff;
-    background-color: #2b2b2b;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .personal-info,
+  .attributes {
+    width: 100%;
+    height: auto;
+    margin-bottom: 12px;
+  }
+  .attributes > div {
+    height: fit-content;
+    margin-bottom: 6px;
+  }
+
+  .situation {
+    height: auto;
+    padding-bottom: 12px;
+  }
+  .footer {
+    flex-direction: column;
+    height: auto;
+    width: 90%;
+    gap: 8px;
+    padding: 8px 0;
+  }
 }
 
-.footer button, .footer input[type="file"]{
-    padding: 8px 16px;
-    font-size: 16px;
-    font-weight: 600;
-    border: none;
-    background-color: #1b1b1b;
-    color: #acacac;
-    border: solid 2px #acacac;
-    cursor: pointer;
-    
+@media (max-width: 480px) {
+  body {
+  }
+  .card,
+  .footer {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .personal-info div {
+    font-size: 12px;
+    gap: 6px 8px;
+  }
+
+  .expertises {
+    overflow-x: hidden;
+    grid-template-columns: 1fr;
+  }
+
+  .expertise {
+    font-size: 10px;
+    height: 50px;
+    padding: 0 2px;
+  }
+
+  .expertise section {
+    min-width: 50px;
+    height: 50px;
+  }
+
+  .expertise section .value {
+    height: 50px;
+    min-width: 50px;
+  }
+
+  .expertise section .value .max {
+    height: 100%;
+    line-height: 50px;
+  }
+
+  .expertise section .value .med,
+  .expertise section .value .min {
+    height: 25px;
+    line-height: 23.6px;
+  }
+
+  .attributes {
+    gap: 0;
+    padding-bottom: 6px;
+    place-items: center;
+  }
+
+  .attributes > div {
+    width: fit-content;
+  }
+
+  .attributes > div > section {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .attributes > div > section > h3 {
+    width: fit-content;
+    height: 30px;
+  }
+
+  .footer {
+    width: 90%;
+  }
 }

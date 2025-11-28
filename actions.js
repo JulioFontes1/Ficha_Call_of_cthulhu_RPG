@@ -1,4 +1,138 @@
+let loaded = false;
+let jsonCard = {};
 const uploadButton = document.querySelector(".upload");
+const managerPointButtons = document.querySelectorAll(".add, .rem");
+const searshInput = document.querySelector(
+  ".expertises-container .searsh .searsh-input"
+);
+
+const allExpertisesBtn = document.getElementById("all");
+const favoriteExpertisesBtn = document.getElementById("favorites");
+
+searshInput.addEventListener("input", () => {
+  const filter = searshInput.textContent.toLowerCase();
+  const expertises = jsonCard.expertises;
+
+  let filteredExpertises;
+
+  if (filter === "") {
+    filteredExpertises = expertises;
+  } else {
+    filteredExpertises = expertises.filter((exp) =>
+      (exp.expertise || "").toLowerCase().includes(filter)
+    );
+  }
+  console.log();
+  searshInput.parentElement.nextElementSibling.innerHTML = "";
+  loadExpertises(filteredExpertises);
+});
+
+managerPointButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const pointType = button.id;
+
+    if (pointType.includes("life")) {
+      const maxPoint = document.querySelector("#life .max");
+      let currentPoint = document.querySelector("#life .current");
+      const barPoint = document.querySelector(".life-point");
+      if (pointType.includes("add")) {
+        currentPoint.textContent = Number(currentPoint.textContent) + 1;
+        if (Number(currentPoint.textContent) > Number(maxPoint.textContent))
+          return;
+        barPoint.style.width = `${
+          (Number(currentPoint.textContent) / Number(maxPoint.textContent)) *
+          100
+        }%`;
+      } else {
+        if (Number(currentPoint.textContent) > 0) {
+          currentPoint.textContent = Number(currentPoint.textContent) - 1;
+          if (Number(currentPoint.textContent) > Number(maxPoint.textContent))
+            return;
+
+          barPoint.style.width = `${
+            (Number(currentPoint.textContent) / Number(maxPoint.textContent)) *
+            100
+          }%`;
+        }
+      }
+    }
+    if (pointType.includes("mage")) {
+      const maxPoint = document.querySelector("#mage .max");
+      let currentPoint = document.querySelector("#mage .current");
+      const barPoint = document.querySelector(".mage-point");
+
+      if (pointType.includes("add")) {
+        currentPoint.textContent = Number(currentPoint.textContent) + 1;
+
+        if (Number(currentPoint.textContent) > Number(maxPoint.textContent))
+          return;
+
+        barPoint.style.width = `${
+          (Number(currentPoint.textContent) / Number(maxPoint.textContent)) *
+          100
+        }%`;
+      } else {
+        if (Number(currentPoint.textContent) > 0) {
+          currentPoint.textContent = Number(currentPoint.textContent) - 1;
+          if (Number(currentPoint.textContent) > Number(maxPoint.textContent))
+            return;
+
+          barPoint.style.width = `${
+            (Number(currentPoint.textContent) / Number(maxPoint.textContent)) *
+            100
+          }%`;
+        }
+      }
+    }
+    if (pointType.includes("sanity")) {
+      const maxPoint = document.querySelector("#sanity .max");
+      let currentPoint = document.querySelector("#sanity .current");
+      const barPoint = document.querySelector(".sanity-point");
+      if (pointType.includes("add")) {
+        currentPoint.textContent = Number(currentPoint.textContent) + 1;
+
+        if (Number(currentPoint.textContent) > Number(maxPoint.textContent))
+          return;
+
+        barPoint.style.width = `${
+          (Number(currentPoint.textContent) / Number(maxPoint.textContent)) *
+          100
+        }%`;
+      } else {
+        if (Number(currentPoint.textContent) > 0) {
+          currentPoint.textContent = Number(currentPoint.textContent) - 1;
+        }
+
+        if (Number(currentPoint.textContent) > Number(maxPoint.textContent))
+          return;
+
+        barPoint.style.width = `${
+          (Number(currentPoint.textContent) / Number(maxPoint.textContent)) *
+          100
+        }%`;
+      }
+    }
+  });
+});
+
+allExpertisesBtn.addEventListener("click", () => {
+  const allExpertises = document.querySelector(".expertises");
+  const favoriteExpertises = document.querySelector(".favorite-expertises");
+
+  allExpertises.style.display = "grid";
+  favoriteExpertises.style.display = "none";
+  console.log(favoriteExpertises);
+});
+
+favoriteExpertisesBtn.addEventListener("click", () => {
+  const allExpertises = document.querySelector(".expertises");
+  const favoriteExpertises = document.querySelector(".favorite-expertises");
+
+  allExpertises.style.display = "none";
+  favoriteExpertises.style.display = "grid";
+  console.log(allExpertises);
+  console.log(favoriteExpertises);
+});
 
 uploadButton.addEventListener("click", () => {
   const input = document.createElement("input");
@@ -25,16 +159,15 @@ uploadButton.addEventListener("click", () => {
     input.remove();
   });
 
-  // abre o seletor de arquivo
   input.click();
 });
 
 function loadCard(card) {
-    loadHeader(card.personalInfo);
-    loadAttributes(card.attributes);
-    loadSituation(card.situation);
-    loadExpertises(card.expertises);
-    calcSituation();
+  loadHeader(card.personalInfo);
+  loadAttributes(card.attributes);
+  loadSituation(card.situation);
+  loadExpertises(card.expertises);
+  calcSituation();
 }
 
 function loadHeader(header) {
@@ -165,6 +298,34 @@ function loadSituation(situation) {
 
   const currentMage = document.querySelector("#mage .current");
   currentMage.textContent = situation.currentMage || "0";
+
+  const lifeBarPoint = document.querySelector(".life-point");
+  const sanityBarPoint = document.querySelector(".sanity-point");
+  const mageBarPoint = document.querySelector(".mage-point");
+
+  if (Number(currentLife.textContent) > Number(situation.maxLife)) {
+    lifeBarPoint.style.width = "100%";
+  }
+
+  lifeBarPoint.style.width = `${
+    (Number(currentLife.textContent) / Number(situation.maxLife)) * 100
+  }%`;
+
+  if (Number(currentSanity.textContent) > Number(situation.maxSanity)) {
+    sanityBarPoint.style.width = "100%";
+  }
+
+  sanityBarPoint.style.width = `${
+    (Number(currentSanity.textContent) / Number(situation.maxSanity)) * 100
+  }%`;
+
+  if (Number(currentMage.textContent) > Number(situation.maxMage)) {
+    mageBarPoint.style.width = "100%";
+  }
+
+  mageBarPoint.style.width = `${
+    (Number(currentMage.textContent) / Number(situation.maxMage)) * 100
+  }%`;
 }
 
 function calcSituation() {
@@ -189,12 +350,13 @@ function calcSituation() {
 }
 
 function loadExpertises(expertiseList) {
-  console.log([...expertiseList]);
+  let expertises = [...expertiseList];
 
-  const expertises = [...expertiseList];
-
-  document.querySelector(".lucky p").textContent =
-    expertises[expertises.length - 1].value;
+  if (loaded == false) {
+    const luckyValue = expertises.find((exp) => exp.lucky);
+    document.querySelector(".lucky p").textContent = luckyValue.value;
+    loaded = true;
+  }
 
   expertises.forEach((exp) => {
     const expertisesBox = document.querySelectorAll(".expertises");
@@ -202,8 +364,21 @@ function loadExpertises(expertiseList) {
     const expertiseDiv = document.createElement("div");
     expertiseDiv.classList.add("expertise");
 
+    const favoriteExpertiseIcon = document.createElement("i");
+    favoriteExpertiseIcon.classList.add("fa", "fa-star-o");
+    if(exp.favorite){
+      favoriteExpertiseIcon.classList.add("favorite")
+    }
+    favoriteExpertiseIcon.addEventListener("click", () =>
+      favoriteExpertiseIcon.classList.toggle("favorite")
+    );
+
     const boxDiv = document.createElement("div");
     boxDiv.classList.add("expertise_check-box");
+    console.log(exp)
+    if (exp.cheked) {
+      boxDiv.classList.add("checked");
+    }
     boxDiv.addEventListener("click", selectExpertise);
 
     const p = document.createElement("p");
@@ -236,6 +411,7 @@ function loadExpertises(expertiseList) {
     valueDiv.appendChild(minH4);
 
     section.appendChild(valueDiv);
+    expertiseDiv.appendChild(favoriteExpertiseIcon);
     expertiseDiv.appendChild(boxDiv);
     expertiseDiv.appendChild(p);
     expertiseDiv.appendChild(section);
@@ -250,5 +426,7 @@ fetch("./ficha_vazia.json")
   .then((res) => res.json())
   .then((data) => {
     loadCard(data);
+    loaded = false;
+    jsonCard = data;
   })
   .catch((err) => console.error(err));

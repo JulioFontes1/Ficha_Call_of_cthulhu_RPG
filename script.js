@@ -1,3 +1,5 @@
+
+
 function setLimitInput() {
   const campos = document.querySelectorAll("[contenteditable][data-limit]");
 
@@ -106,6 +108,7 @@ function verifyExpertises() {
       expertise,
       value,
       cheked: e.firstElementChild.classList.contains("checked"),
+      favorite: e.firstElementChild.nextElementSibling.classList.contains("favorite")
     };
 
     expertiseSelected.push(obj);
@@ -195,23 +198,6 @@ selectExpertise();
 document.querySelector(".download").addEventListener("click", () => {
   createCard();
 });
-
-// window.onload = () => {
-//   const card = createCard();
-
-//   fetch("http://localhost:3000/", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(card),
-//   })
-//     .then((res) => res.json())
-//     .then((data) => {
-//       console.log("Resposta do servidor:", data);
-//     })
-//     .catch((err) => console.error("Erro:", err));
-// };
 
 function downloadCard(obj, fileName) {
   const dataStr = JSON.stringify(obj, null, 2);

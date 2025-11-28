@@ -22,8 +22,7 @@ searshInput.addEventListener("input", () => {
       (exp.expertise || "").toLowerCase().includes(filter)
     );
   }
-  console.log();
-  searshInput.parentElement.nextElementSibling.innerHTML = "";
+  searshInput.parentElement.parentElement.nextElementSibling.innerHTML = "";
   loadExpertises(filteredExpertises);
 });
 
@@ -150,7 +149,6 @@ uploadButton.addEventListener("click", () => {
 
     reader.onload = function (e) {
       const json = JSON.parse(e.target.result);
-      console.log(json);
       loadCard(json);
     };
 
@@ -283,7 +281,6 @@ function loadSituation(situation) {
     document.querySelector("#seriousInj .box").classList.add("checked");
   }
   if (situation.permentInsanity) {
-    console.log(document.querySelector("#permInsanity .box"));
     document.querySelector("#permInsanity .box").classList.add("checked");
   }
   if (situation.tempInsanity) {
@@ -375,7 +372,6 @@ function loadExpertises(expertiseList) {
 
     const boxDiv = document.createElement("div");
     boxDiv.classList.add("expertise_check-box");
-    console.log(exp)
     if (exp.cheked) {
       boxDiv.classList.add("checked");
     }

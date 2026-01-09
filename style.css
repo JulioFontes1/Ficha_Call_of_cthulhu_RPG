@@ -288,6 +288,8 @@ body {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-content: start;
+  gap: 4px;
   overflow-x: auto;
   position: relative;
 }

@@ -1,15 +1,25 @@
-let loaded = false;
-let jsonCard = {};
+import { selectExpertise } from "./js/components/expertises.js";
+import { setLimitInput } from "./script.js";
+import { calcSituation } from "./js/components/situation.js"
+
+
 const uploadButton = document.querySelector(".upload");
-const managerPointButtons = document.querySelectorAll(".add, .rem");
 const searshInput = document.querySelector(
   ".expertises-container .searsh .searsh-input"
 );
 
+uploadButton.addEventListener("click", uploadCard);
+searshInput.addEventListener("input", searshFilter);
+
+let loaded = false;
+let jsonCard = {};
+const managerPointButtons = document.querySelectorAll(".add, .rem");
+
 const allExpertisesBtn = document.getElementById("all");
 const favoriteExpertisesBtn = document.getElementById("favorites");
 
-searshInput.addEventListener("input", () => {
+
+function searshFilter() {
   const filter = searshInput.textContent.toLowerCase();
   const expertises = jsonCard.expertises;
 
@@ -24,7 +34,7 @@ searshInput.addEventListener("input", () => {
   }
   searshInput.parentElement.parentElement.nextElementSibling.innerHTML = "";
   loadExpertises(filteredExpertises);
-});
+}
 
 managerPointButtons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -133,7 +143,7 @@ favoriteExpertisesBtn.addEventListener("click", () => {
   console.log(favoriteExpertises);
 });
 
-uploadButton.addEventListener("click", () => {
+function uploadCard() {
   const input = document.createElement("input");
   input.type = "file";
   input.accept = ".json";
@@ -158,7 +168,7 @@ uploadButton.addEventListener("click", () => {
   });
 
   input.click();
-});
+}
 
 function loadCard(card) {
   loadHeader(card.personalInfo);
@@ -325,26 +335,7 @@ function loadSituation(situation) {
   }%`;
 }
 
-function calcSituation() {
-  const forcaMax = document.querySelector("#for .max").textContent;
-  const desMax = document.querySelector("#des .max").textContent;
-  const podMax = document.querySelector("#pod .max").textContent;
-  const conMax = document.querySelector("#con .max").textContent;
-  const apaMax = document.querySelector("#apa .max").textContent;
-  const eduMax = document.querySelector("#edu .max").textContent;
-  const tamMax = document.querySelector("#tam .max").textContent;
-  const intelMax = document.querySelector("#int .max").textContent;
-  const movMax = document.querySelector("#mov .max").textContent;
 
-  const maxLifePoints = document.querySelector("#life .max");
-  maxLifePoints.textContent = Math.floor(
-    (Number(conMax) + Number(tamMax)) / 10
-  );
-  const maxSanityPoints = document.querySelector("#sanity .max");
-  maxSanityPoints.textContent = podMax;
-  const maxMagePoints = document.querySelector("#mage .max");
-  maxMagePoints.textContent = Math.floor(Number(podMax / 5));
-}
 
 function loadExpertises(expertiseList) {
   let expertises = [...expertiseList];
